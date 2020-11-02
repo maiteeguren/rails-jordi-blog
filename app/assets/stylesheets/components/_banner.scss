@@ -17,6 +17,7 @@
     z-index: 1;
     color: white;
     margin: 5%;
+    width: 50vw;
     p {
         font-size: 20px;
         opacity: 0.8;
@@ -51,7 +52,7 @@ h1 span {
     text-decoration: none;
     transition: 0.2s;
     &:hover {
-        background-color: lightgreen;
+        background-color: #66CDA3;
 
     }
 }

@@ -1,0 +1,27 @@
+nav {
+    background-color: transparent;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+}
+
+nav ul li {
+    font-size: 70px;
+    margin: 10px 15px;
+    list-style-type: none;
+}
+
+nav a {
+    color: white;
+    text-shadow: 0 0 30px white;
+}

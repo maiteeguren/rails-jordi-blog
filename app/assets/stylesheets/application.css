@@ -14,10 +14,15 @@
  *= require_self
  */
  @import "banner";
+ @import "navbar";
+ @import "section";
  
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+}
+a {
+    text-decoration: none;
 }
