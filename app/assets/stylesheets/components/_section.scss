@@ -106,11 +106,15 @@ img {
 .card__overlay--indigo {
 	background-image: linear-gradient(to bottom, rgba($indigo, 0.1), rgba($indigo, 0.8));
     z-index: 2;
-    
 }
 
 .card__overlay--blue {
 	background-image: linear-gradient(to bottom, rgba($blue, 0.1), rgba($blue, 0.8));
+	z-index: 2;
+}
+
+.card__overlay--black {
+	background-image: linear-gradient(to bottom, rgba($black, 0.1), rgba($black, 0.8));
 	z-index: 2;
 }
 

@@ -15,78 +15,34 @@
     <section id="projects">
         <h2><span>Projects</span></h2>
         <div class="site__wrapper">
-            <div class="grid">
-                <div class="card">
-                    <div class="card__image">
-                        <img src="https://unsplash.it/400/608?image=123" alt="">
-
-                        <div class="card__overlay card__overlay--indigo">
-                            <div class="card__overlay-content">
-                                <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
-                            </div>
+            <% @posts.each_with_index do |post, index| %>
+                <div class="grid">
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="https://unsplash.it/400/300?image=100" alt="">
+                            <% if (index % 4 === 0) %>
+                                <div class="card__overlay card__overlay--indigo">
+                                    <div class="card__overlay-content">
+                                        <span class="card__title"><%= post.title %></span>
+                                    </div>
+                                </div>
+                            <% elsif (index % 2 === 0) %>
+                                <div class="card__overlay card__overlay--black">
+                                    <div class="card__overlay-content">
+                                        <span class="card__title"><%= post.title %></span>
+                                    </div>
+                                </div>
+                            <% else %>
+                                <div class="card__overlay card__overlay--blue">
+                                    <div class="card__overlay-content">
+                                        <span class="card__title"><%= post.title %></span>
+                                    </div>
+                                </div>
+                            <% end %>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="grid">
-                <div class="card">
-                    <div class="card__image">
-                        <img src="https://unsplash.it/400/300?image=100" alt="">
-
-                        <div class="card__overlay card__overlay--blue">
-                            <div class="card__overlay-content">
-
-                                <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid">
-                <div class="card">
-                    <div class="card__image">
-                        <img src="https://unsplash.it/400/300?image=200" alt="">
-                        <div class="card__overlay card__overlay--indigo">
-                            <div class="card__overlay-content">
-                                <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>    
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid">
-                <div class="card">
-                    <div class="card__image">
-                        <img src="https://unsplash.it/400/300?image=300" alt="">
-
-                        <div class="card__overlay card__overlay--indigo">
-                            <div class="card__overlay-content">
-
-                                <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>   
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid">
-                <div class="card">
-                    <div class="card__image">
-                        <img src="https://unsplash.it/400/300?image=400" alt="">
-
-                        <div class="card__overlay card__overlay--blue">
-                            <div class="card__overlay-content">
-                                <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>   
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>		
+            <% end %>	
         </div>
-   
     </section>
-    
 </main>
