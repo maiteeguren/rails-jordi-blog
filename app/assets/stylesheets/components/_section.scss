@@ -18,36 +18,105 @@ h2 span {
     margin: 80px auto;
 }
 
-.card {
-    overflow: hidden;
-    height: 120px;
-    background: white;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    display: flex;
-    align-items: center;
-    margin: 20px 0px;
-}
-  
-.card img {
-    height: 100%;
-    width: 120px;
-    object-fit: cover;
+
+$indigo: #5C6BC0; 
+$blue: #29B6F6;
+$black: #717171;
+
+// Basic Styles for Demo
+*,*:after,*:before {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
-.card h3 {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 0;
+img {
+	height: auto;
+	max-width: 100%;
 }
 
-.card p {
-    font-size: 12px;
-    line-height: 1.4;
-    opacity: .7;
-    margin-bottom: 0;
-    margin-top: 8px;
+// Basics demo styles
+.site__wrapper {
+	max-width: 1000px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 50px 0;
 }
 
-.card .card-info {
-    padding: 16px;
+// Basic Grid for Demo;
+.grid {
+	float: none;
+	width: 100%;
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+	padding-bottom: 0.4em;
+
+	@media screen and (min-width: 40.063em) {
+		float: left;
+		width: 33.333%;
+	}
+}
+
+// Card Article
+.card__image {
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+			border-radius: 3px;
+	display: block;
+	min-height: 240px; 
+	overflow: hidden;
+	position: relative;
+
+	> img {
+		display: block;
+		margin-bottom: 0;
+	}
+}
+
+.card__title {
+	color: white;
+	display: inline-block;
+	font-size: 1.5em;
+	line-height: 1.2;
+	margin-bottom: 0.75em;
+	text-decoration: none;
+}
+
+.card__overlay {
+	content: "";
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+    z-index: 1;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+         transition: 0.3s;
+
+    &:hover {
+        opacity: 0;
+    }
+}
+
+.card__overlay--indigo {
+	background-image: linear-gradient(to bottom, rgba($indigo, 0.1), rgba($indigo, 0.8));
+    z-index: 2;
+    
+}
+
+.card__overlay--blue {
+	background-image: linear-gradient(to bottom, rgba($blue, 0.1), rgba($blue, 0.8));
+	z-index: 2;
+}
+
+.card__overlay-content {
+	position: absolute;
+	bottom: 0;
+	padding: 1.5em;
+	z-index: 3;
 }
