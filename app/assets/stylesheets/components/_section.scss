@@ -1,6 +1,6 @@
 h2 {
     color: black;
-    font-size: 80px;
+    font-size: 50px;
     text-transform: lowercase;
     font-weight: 200;
     text-align: right;
@@ -8,10 +8,17 @@ h2 {
 }
 
 h2 span {
-    border-bottom: 10px solid black;
+//     border-bottom: 10px solid linear-gradient(to right, #E040FB, #00BCD4);;
     padding-right: 50px;
     padding-bottom: 10px;
+	border-style: solid;
+    border-width: 0 0 5px 0;
+    padding-bottom:5px;
+    margin-bottom:20px;
+    width:fit-content;
+    border-image: linear-gradient(to right, #E040FB, #00BCD4) 1;
 }
+
 
 .projects-container {
     width: 80vw;
