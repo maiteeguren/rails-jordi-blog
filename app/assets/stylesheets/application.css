@@ -13,9 +13,13 @@
  *= require_tree .
  *= require_self
  */
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
+ @import "font-awesome";
  @import "banner";
  @import "navbar";
  @import "section";
+ @import "footer";
  
 body {
     margin: 0;
@@ -23,6 +27,7 @@ body {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
+    color: rgba(0, 0, 0, 0.8);
 }
 a {
     text-decoration: none;

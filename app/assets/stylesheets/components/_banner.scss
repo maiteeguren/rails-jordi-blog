@@ -52,8 +52,8 @@ button {
 
 button {
 	position: relative;
-	height: 50px;
-	width: 200px;
+	min-height: 50px;
+	min-width: 200px;
 	border: 0;
 	border-radius: 50px;
 	text-transform: uppercase;
@@ -61,23 +61,26 @@ button {
 	letter-spacing: 0.2em;
 	overflow: hidden;
 	//box-shadow: 0 4px 12px 0 rgba(152, 160, 180, 10);
-    z-index: -2;
+    z-index: 0;
     margin: 40px 0;
+    padding: 0 20px;
 }
 
 .fill-one {
 	position: absolute;
 	background-image: linear-gradient(to right, #E040FB, #00BCD4);
-	height: 70px;
+	min-height: 70px;
 	width: 420px;
 	border-radius: 5px;
-	margin: -40px 0 0 -140px;
+    top:0;
+    left: -140px;
 	z-index: -1;
-	transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    
 }
 
 .container-one:hover .fill-one {
-	-webkit-transform: translateX(100px);
-	-moz-transform: translateX(100px);
-	transform: translateX(100px);
+	-webkit-transform: translateX(50px);
+	-moz-transform: translateX(50px);
+	transform: translateX(50px);
 }

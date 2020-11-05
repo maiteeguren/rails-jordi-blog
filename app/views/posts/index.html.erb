@@ -16,8 +16,20 @@
     </div>
 </header>
 <main>
-    <section id="about">
-        <h2><span>About me</span></h2>
+    <section id="about" class="dark">
+        <div class="content">
+            <img src="https://source.unsplash.com/random" alt="" height="500px">
+            <div class="text">
+                <h2><span>About me</span></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="container container-one">
+                    <button href="#">
+                        download resume
+                        <div class="fill-one"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
     </section>
     <section id="projects">
         <h2><span>Projects</span></h2>
@@ -25,8 +37,9 @@
             <% @posts.each_with_index do |post, index| %>
                 <div class="grid">
                     <div class="card">
-                        <div class="card__image">
-                            <img src="https://unsplash.it/400/300?image=100" alt="">
+                        <div class="card__image">	
+                            <img class="gif" src="https://compote.slate.com/images/697b023b-64a5-49a0-8059-27b963453fb1.gif" alt="">
+                            <img class="thumbnail" src="https://unsplash.it/400/300?image=100" alt="">
                             <% if (index % 4 === 0) %>
                                 <div class="card__overlay card__overlay--indigo">
                                     <div class="card__overlay-content">
@@ -53,3 +66,13 @@
         </div>
     </section>
 </main>
+<footer id="contact" class="dark">
+    <div>
+        <p>Reach me at</p>
+        <ul class="icon-list">
+            <li><a href="#"><i class="fab fa-github"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="far fa-envelope"></i></a></li>
+        </ul>
+    </div>
+</footer>
