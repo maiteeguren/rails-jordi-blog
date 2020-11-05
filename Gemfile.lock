@@ -195,7 +195,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   bootstrap-sass (~> 3.3.5)
   byebug
-  font-awesome-sass (~> 5.15.1)
+  font-awesome-sass
   jbuilder (~> 2.7)
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)

@@ -1,16 +1,25 @@
+
 footer {
-    padding: 50px;
-
-}
-
-footer div {
+    height: 10vh;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-}
-.icon-list {
-    //display: flex;
-}
-
-.icon-list li a {
-    color: black;
+    padding: 0px 50px;
+    color: white;
+  
+    .footer-links {
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+    }
+    .footer-links a {
+      color: white;
+      opacity: 0.5;
+      text-decoration: none;
+      font-size: 24px;
+      padding: 0px 20px;
+    }
+    .footer-links a:hover {
+        opacity: 1;
+    }
 }

@@ -47,6 +47,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # My gems
 gem 'autoprefixer-rails'
-gem 'font-awesome-sass', '~> 5.15.1'
+gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.3.5'
