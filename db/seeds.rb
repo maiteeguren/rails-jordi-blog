@@ -16,3 +16,7 @@ post4 = Post.create!(title: 'title4', content: 'content4', author:'Jordi')
 post5 = Post.create!(title: 'title5', content: 'content5', author:'Jordi')
 
 puts "#{Post.all.count} posts created"
+
+puts "creating user"
+
+puts "#{User.all.count} user(s) created"
