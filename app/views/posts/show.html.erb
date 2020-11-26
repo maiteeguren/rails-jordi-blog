@@ -1,0 +1,22 @@
+<div class="post-container">
+    <div>
+        <div class="container container-one">
+            <button href="<%= edit_post_path(@post)%>" class="icon-button">
+                <i class="fas fa-edit"></i>
+                <div class="fill-one"></div>
+            </button>
+        </div>
+        <div class="container container-one">
+            <button href="#" class="icon-button">
+                <i class="fas fa-trash"></i>
+                <div class="fill-one"></div>
+            </button>
+        </div>
+    </div>
+    <h2><span><%= @post.title %></span></h2>
+    <p>by <%= @post.author %></p>
+    <p><%= @post.content %></p>
+    <% if @post.photos %>
+        <p>has attached photos</p>
+    <% end %>
+</div>

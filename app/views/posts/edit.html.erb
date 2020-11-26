@@ -1,0 +1,18 @@
+<div class="post-container">
+    <h2>Edit post</h2>
+
+    <%= simple_form_for(@post) do |f| %>
+        <%= f.input :title %>
+        <%= f.input :author %>
+        <%= f.input :description %>
+        <%= f.input :content %>
+        <%= f.input :photo, as: :file %>
+        <%= f.input :photo, as: :file %>
+        <div class="container container-one">
+            <%= f.button :submit do %>
+                Submit
+                <div class="fill-one"></div>
+            <% end %>
+        </div>
+    <% end %>
+</div>

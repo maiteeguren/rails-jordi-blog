@@ -1,0 +1,13 @@
+<div class="post-container">
+    <h2>Add a new post</h2>
+
+    <%= simple_form_for(@post) do |f| %>
+        <%= f.input :title %>
+        <%= f.input :author %>
+        <%= f.input :description %>
+        <%= f.input :content %>
+        <%= f.input :photo, as: :file %>
+        <%= f.input :photo, as: :file %>
+        <%= f.button :submit %>
+    <% end %>
+</div>

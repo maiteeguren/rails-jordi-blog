@@ -51,3 +51,5 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'devise'
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'cloudinary', '~> 1.16.0'
