@@ -36,9 +36,14 @@ section {
 	
 }
 
+#projects .title {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 20px;
+}
+
 #projects h2 {
-	margin: 20px auto;
-	margin-top: 40px;
+	margin-top: 30px;
 }
 
 // Basic Styles for Demo
