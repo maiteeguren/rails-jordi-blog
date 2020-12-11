@@ -43,13 +43,13 @@ h1 span {
 
 // buttons
 
-button {
+.btn, button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 	font-family: Helvetica, sans-serif;
 	font-weight: 100;
 	color: #fff;
-}
-
-button {
 	position: relative;
 	min-height: 50px;
 	min-width: 200px;
@@ -64,6 +64,9 @@ button {
     margin: 40px 0;
     padding: 0 20px;
 }
+.btn, button:focus {
+    outline: none;
+}
 
 .fill-one {
 	position: absolute;
@@ -74,14 +77,17 @@ button {
     top:0;
     left: -140px;
 	z-index: -1;
-    transition: all 0.2s ease;
-    
+    transition: all 0.2s ease;   
 }
 
 .container-one:hover .fill-one {
-	-webkit-transform: translateX(50px);
-	-moz-transform: translateX(50px);
-	transform: translateX(50px);
+	-webkit-transform: translateX(100px);
+	-moz-transform: translateX(100px);
+	transform: translateX(100px);
+}
+
+.container-one:focus-within .fill-one {
+
 }
 
 // RESPONSIVE

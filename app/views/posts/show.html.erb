@@ -1,10 +1,10 @@
 <div class="post-container">
     <div class="icons-container">
         <div class="container container-one">
-            <button href="<%= edit_post_path(@post)%>" class="icon-button">
+            <%= link_to edit_post_path(@post), class:"btn icon-button" do %>
                 <i class="fas fa-edit"></i>
                 <div class="fill-one"></div>
-            </button>
+            <% end %>
         </div>
         <div class="container container-one">
             <button href="#" class="icon-button">

@@ -35,12 +35,11 @@
         <div class="site__wrapper">
             <div class="title">
                 <h2><span>Projects</span></h2>
-                <%= link_to, new_post_path %>
                 <div class="container container-one">
-                    <button href="#">
+                    <%= link_to new_post_path, class:"btn" do %>
                         add new project
                         <div class="fill-one"></div>
-                    </button>
+                    <% end %>
                 </div>
             </div>
             <% @posts.each_with_index do |post, index| %>

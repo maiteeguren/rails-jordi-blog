@@ -9,10 +9,10 @@ class PostsController < ApplicationController
 
     def create
         @post = Post.new(post_params)
-        @post.save
-    
-        # no need for app/views/restaurants/create.html.erb
-        redirect_to posts_path
+
+        if @post.save!
+            redirect_to root_path
+        end
     end
 
     def show
@@ -33,6 +33,6 @@ class PostsController < ApplicationController
     private
 
     def post_params
-        params.require(:post).permit(:title, :author, :description, :content, :photo, :photo)
+        params.require(:post).permit(:title, :author, :description, :content, photos: []))
     end
 end
