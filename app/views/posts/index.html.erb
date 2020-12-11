@@ -46,8 +46,20 @@
                 <div class="grid">
                     <div class="card__image">	
                         <%= link_to "", post_path(post), class:'post-link' %>
-                        <img class="thumbnail" src="https://pyxis.nymag.com/v1/imgs/f22/cee/18a5c624814d1fee69692841d2f92e89ad-21-homer-bushes-lede.rhorizontal.w1200.jpg" alt="">
-                        <img class="gif" src="https://compote.slate.com/images/697b023b-64a5-49a0-8059-27b963453fb1.gif" alt="">
+
+                        <% if post.photos.attached? %>
+                            <% post.photos.each_with_index do |photo| %>
+                                <% if (index === 0) %>
+                                    <%= cl_image_tag photo.key, class:"thumbnail" %>
+                                <% else %>
+                                    <%= cl_image_tag photo.key, class:"gif" %>
+                                <% end %>
+                            <% end %>
+                        <% else %>
+                            <img class="thumbnail" src="https://pyxis.nymag.com/v1/imgs/f22/cee/18a5c624814d1fee69692841d2f92e89ad-21-homer-bushes-lede.rhorizontal.w1200.jpg" alt="">
+                            <img class="gif" src="https://compote.slate.com/images/697b023b-64a5-49a0-8059-27b963453fb1.gif" alt="">
+                        <% end %>
+
                         <% if (index % 4 === 0) %>
                             <div class="card__overlay card__overlay--indigo">
                                 <div class="card__overlay-content">

@@ -6,11 +6,10 @@
         <%= f.input :author %>
         <%= f.input :description %>
         <%= f.input :content %>
-        <%= f.input :photo, as: :file %>
-        <%= f.input :photo, as: :file %>
+        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
         <div class="container container-one">
-            <%= f.button :submit do %>
-                Submit
+            <%= button_tag(type: 'submit') do %>
+                save
                 <div class="fill-one"></div>
             <% end %>
         </div>

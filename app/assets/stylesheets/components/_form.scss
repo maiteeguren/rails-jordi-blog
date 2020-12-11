@@ -1,0 +1,19 @@
+form {
+    font-size: 18px;
+}
+
+form .input {
+    display: grid;
+}
+
+form .input input,
+form .input textarea {
+    font-size: 18px;
+    border: 1px solid lightgrey;
+    padding: 5px;
+    margin: 5px 0px 15px 0px;;
+}
+
+#post_photos {
+    border: 0;
+}

@@ -16,7 +16,7 @@
     <h2><span><%= @post.title %></span></h2>
     <p>by <%= @post.author %></p>
     <p><%= @post.content %></p>
-    <% if @post.photos %>
+    <% if @post.photos.attached? %>
         <p>has attached photos</p>
     <% end %>
 </div>

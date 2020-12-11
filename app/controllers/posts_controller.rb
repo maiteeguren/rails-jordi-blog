@@ -12,6 +12,8 @@ class PostsController < ApplicationController
 
         if @post.save!
             redirect_to root_path
+        else
+            redirect_to root_path
         end
     end
 
@@ -25,14 +27,17 @@ class PostsController < ApplicationController
 
     def update
         @post = Post.find(params[:id])
-        @post.update(post_params)
     
-        redirect_to post_path(@post)
+        if @post.update(post_params)
+            redirect_to root_path
+        else
+            redirect_to post_path(@post)
+        end
     end
 
     private
 
     def post_params
-        params.require(:post).permit(:title, :author, :description, :content, photos: []))
+        params.require(:post).permit(:title, :author, :description, :content, photos: [])
     end
 end
