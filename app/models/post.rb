@@ -3,4 +3,5 @@ class Post < ApplicationRecord
     validates :content, presence: true, uniqueness: true
     validates :author, presence: true
     has_many_attached :photos
+    has_rich_text :content
 end

@@ -22,3 +22,5 @@ document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
   particlesEffect();
 });
+require("trix")
+require("@rails/actiontext")

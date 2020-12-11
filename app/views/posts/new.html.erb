@@ -1,18 +1,5 @@
 <div class="post-container">
     <h2>Add a new post</h2>
 
-    <%= simple_form_for(@post) do |f| %>
-        <%= f.input :title %>
-        <%= f.input :author %>
-        <%= f.input :description %>
-        <%= f.input :content %>
-        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-        <div class="container container-one">
-            <%= button_tag(type: 'submit') do %>
-                create post
-                <div class="fill-one"></div>
-            <% end %>
-        </div>
-        <%= f.submit %>
-    <% end %>
+    <%= render 'shared/form' %>
 </div>
