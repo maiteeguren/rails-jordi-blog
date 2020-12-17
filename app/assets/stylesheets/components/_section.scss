@@ -40,12 +40,21 @@ section {
 	display: flex;
 	justify-content: space-between;
 	padding-bottom: 20px;
+	margin-bottom: 30px;
 }
 
 #projects h2 {
 	margin-top: 30px;
 }
 
+#projects .container-one {
+	align-items: center;
+    display: flex;
+}
+
+#projects .container-one .btn {
+	margin: 0;
+}
 // Basic Styles for Demo
 *,*:after,*:before {
 	-webkit-box-sizing: border-box;

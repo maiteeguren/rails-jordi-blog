@@ -1,18 +1,20 @@
 <div class="post-container">
-    <div class="icons-container">
-        <div class="container container-one">
-            <%= link_to edit_post_path(@post), class:"btn icon-button" do %>
-                <i class="fas fa-edit"></i>
-                <div class="fill-one"></div>
-            <% end %>
+    <% if user_signed_in? %>
+        <div class="icons-container">
+            <div class="container container-one">
+                <%= link_to edit_post_path(@post), class:"btn icon-button" do %>
+                    <i class="fas fa-edit"></i>
+                    <div class="fill-one"></div>
+                <% end %>
+            </div>
+            <div class="container container-one">
+                <button href="#" class="btn icon-button">
+                    <i class="fas fa-trash"></i>
+                    <div class="fill-one"></div>
+                </button>
+            </div>
         </div>
-        <div class="container container-one">
-            <button href="#" class="btn icon-button">
-                <i class="fas fa-trash"></i>
-                <div class="fill-one"></div>
-            </button>
-        </div>
-    </div>
+    <% end %>
     <h2><span><%= @post.title %></span></h2>
     <p>by <%= @post.author %></p>
     <p><%= @post.content %></p>

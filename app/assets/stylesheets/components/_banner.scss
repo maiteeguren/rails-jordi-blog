@@ -42,7 +42,6 @@ h1 span {
 }
 
 // buttons
-
 .btn {
     display: flex;
     align-items: center;
@@ -90,6 +89,18 @@ h1 span {
 
 }
 
+.btn-transparent {
+    background-color: transparent;
+    color: white;
+    z-index: 10000;
+}
+
+.log-out {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
 // RESPONSIVE
 
 @media(max-width: 1000px) {
@@ -109,3 +120,4 @@ h1 span {
         width: 100vw;
     }
 }
+

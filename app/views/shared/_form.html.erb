@@ -1,18 +1,20 @@
-<%= simple_form_for(@post) do |f| %>
-    <%= f.input :title %>
-    <%= f.input :author %>
-    <%= f.input :description %>
-    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+<% if user_signed_in? %>
+    <%= simple_form_for(@post) do |f| %>
+        <%= f.input :title %>
+        <%= f.input :author %>
+        <%= f.input :description %>
+        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
 
-    <label class="string required" for="post_content"><abbr title="required">*</abbr> Content</label>
-    <div class="form-inputs">
-        <%= f.rich_text_area :content %>
-    </div>
-    
-    <div class="container container-one">
-        <%= button_tag(type: 'submit', class: 'btn') do %>
-            save
-            <div class="fill-one"></div>
-        <% end %>
-    </div>
+        <label class="string required" for="post_content"><abbr title="required">*</abbr> Content</label>
+        <div class="form-inputs">
+            <%= f.rich_text_area :content %>
+        </div>
+        
+        <div class="container container-one">
+            <%= button_tag(type: 'submit', class: 'btn') do %>
+                save
+                <div class="fill-one"></div>
+            <% end %>
+        </div>
+    <% end %>
 <% end %>

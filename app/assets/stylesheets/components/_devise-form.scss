@@ -1,0 +1,47 @@
+.devise-form-container {
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 20px auto;
+    flex-direction: column;
+    background: linear-gradient(to right, #E040FB, #00BCD4);
+    width: 550px;
+}
+
+.devise-form-container,
+.devise-form-container a
+{
+    color: white
+}
+.devise-form-container form {
+    width: 500px;
+    padding: 20px 0;
+}
+
+.devise-form-container form .input input {
+    border-radius: 50px;
+    min-height: 50px;
+    margin: 10px 0;
+    padding: 0 20px;
+}
+
+.devise-form-container form .input input:focus,
+.devise-form-container form .input input:focus-within {
+    outline: none;
+}
+
+.devise-form-container .boolean.optional {
+    min-height: 0px;
+    margin-right: 10px;
+}
+
+.devise-form-container form .input input,
+.devise-form-container form input.btn {
+    background: transparent;
+    border: 2px solid white;
+}
+
+.devise-form-container form input.btn {
+    margin: 20px auto;
+}
